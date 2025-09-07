@@ -1,14 +1,11 @@
-<h1 align="center">
-  Fast Node Manager (<code>fnm</code>)
-  <img alt="Amount of downloads" src="https://img.shields.io/github/downloads/Schniz/fnm/total.svg?style=flat" />
-  <a href="https://github.com/Schniz/fnm/actions"><img src="https://img.shields.io/github/actions/workflow/status/Schniz/fnm/rust.yml?branch=master&label=workflow" alt="GitHub Actions workflow status" /></a>
-</h1>
+# Fast Node Manager (`fnm`)
+
+![Amount of downloads](https://img.shields.io/github/downloads/Schniz/fnm/total.svg?style=flat)
+[![GitHub Actions workflow status](https://img.shields.io/github/actions/workflow/status/Schniz/fnm/rust.yml?branch=master&label=workflow)](https://github.com/Schniz/fnm/actions)
 
 > 🚀 Fast and simple Node.js version manager, built in Rust
 
-<div align="center">
-  <img src="./docs/fnm.svg" alt="Blazing fast!">
-</div>
+![Blazing fast!](./docs/fnm.svg)
 
 ## Features
 
@@ -178,22 +175,27 @@ fnm env --use-on-cd --shell fish | source
 
 Add the following to the end of your profile file:
 
-```powershell
-fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
-```
 
 - For macOS/Linux, the profile is located at `~/.config/powershell/Microsoft.PowerShell_profile.ps1`
 - For Windows location is either:
   - `%userprofile%\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1` Powershell 5
   - `%userprofile%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` Powershell 6+
-- To create the profile file you can run this in PowerShell:
+
+
   ```powershell
   if (-not (Test-Path $profile)) { New-Item $profile -Force }
   ```
+  ```powershell
+  if (-not (Test-Path $profile)) { New-Item $profile -Force }
+  ```
+
+
 - To edit your profile run this in PowerShell:
+
   ```powershell
   Invoke-Item $profile
   ```
+
 
 #### Windows Command Prompt aka Batch aka WinCMD
 
@@ -242,7 +244,7 @@ You can replace `%CMDER_ROOT%` with any other convenient path too.
 
 PRs welcome :tada:
 
-### Developing:
+### Developing
 
 ```sh
 # Install Rust
@@ -251,13 +253,13 @@ cd fnm/
 cargo build
 ```
 
-### Running Binary:
+### Running Binary
 
 ```sh
 cargo run -- --help # Will behave like `fnm --help`
 ```
 
-### Running Tests:
+### Running Tests
 
 ```sh
 cargo test
